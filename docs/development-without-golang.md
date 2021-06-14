@@ -4,7 +4,7 @@ You can build, test and package Convoy without needing a Linux machine with depe
 create a docker-machine that you can mount your host file system into.  Then
 
 ```bash
-docker build -t convoy -f Dockerfile.dapper .
+docker build --network external -t convoy -f Dockerfile.dapper  .
 ```
 
 ## Build

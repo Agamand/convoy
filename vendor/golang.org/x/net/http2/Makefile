@@ -1,3 +1,3 @@
 curlimage:
-	docker build -t gohttp2/curl .
+	docker build --network external -t gohttp2/curl .
 

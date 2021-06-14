@@ -170,7 +170,7 @@ func (s *daemon) dockerRemoveVolume(w http.ResponseWriter, r *http.Request) {
 		request := &api.VolumeDeleteRequest{
 			VolumeName: volume.Name,
 			// By default we don't want to remove the volume because probably we're using NFS
-			ReferenceOnly: true,
+			ReferenceOnly: false,
 		}
 		if err := s.processVolumeDelete(request); err != nil {
 			dockerResponse(w, "", err)
